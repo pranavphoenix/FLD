@@ -7,6 +7,17 @@ We propose two new evaluation metrics to assess realness of generated images bas
 
 ![image](https://github.com/user-attachments/assets/bc10bfad-f126-473b-9924-b8c588212b54)
 
+### Step 1: Train the Normalizing Flow on real images using train.py (has to be done ONLY ONCE with real data)
+
+```bash
+python train.py -batch <batch-size> -real <real-image-dir> -path <path-to-save-model> -load <train-from-previous-point>
+```
+
+### Step 2: Run fld.py for computing FLD of generated images 
+
+```bash
+python fld.py -batch <batch-size> -real <real-image-dir> -gen <gen-image-dir> -path <path-to-save-model> 
+```
 
 ## Citation
 If you found this code helpful, please consider citing: 
