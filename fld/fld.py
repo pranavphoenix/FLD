@@ -76,6 +76,6 @@ with torch.no_grad():
 
 print(f"Average Log Likelihood of Generated Images: {gen_log_likelihood}")
 
-FLD = real_log_likelihood / gen_log_likelihood
+FLD =  gen_log_likelihood / real_log_likelihood
 
 print(f"FLD: {FLD}")
