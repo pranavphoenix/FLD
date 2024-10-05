@@ -50,8 +50,8 @@ print(f"No. of Images in Real Data set: {len(real_dataset)}")
 print(f"No. of Images in Generated Data set: {len(gen_dataset)}")
 
 
-real_data_loader = data.DataLoader(real_dataset, batch_size=int(args.Batch_size), shuffle=False, drop_last=False, pin_memory=True, num_workers=8)
-gen_data_loader = data.DataLoader(gen_dataset, batch_size=int(args.Batch_size), shuffle=False, drop_last=False, pin_memory=True, num_workers=8)
+real_data_loader = data.DataLoader(real_dataset, batch_size=int(args.Batch_size), shuffle=False, drop_last=True, pin_memory=True, num_workers=8)
+gen_data_loader = data.DataLoader(gen_dataset, batch_size=int(args.Batch_size), shuffle=False, drop_last=True, pin_memory=True, num_workers=8)
 
 
 real_log_likelihood = 0
